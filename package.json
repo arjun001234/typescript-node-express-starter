@@ -1,0 +1,43 @@
+{
+  "name": "ts-advance-node-blog-app",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "arjun001234 <arjunkanojia001@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --files src/index.ts",
+    "build": "tsc -p .",
+    "test": "jest --detectOpenHandles"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.2",
+    "@types/jsonwebtoken": "^8.5.5",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^16.11.6",
+    "@types/redis": "^2.8.32",
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.14",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "4.3.5"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "googleapis": "^91.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "puppeteer": "^11.0.0",
+    "query-string": "^7.0.1",
+    "redis": "^3.1.2"
+  }
+}
