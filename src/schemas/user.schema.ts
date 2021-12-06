@@ -12,11 +12,7 @@ const UserSchema = new Schema<User,UserModel>({
     }
   },
   password: {
-    type: String, required: [true,'Password is required'], trim: true, validate: {
-      // validator: (v: any) => console.log(v),
-      validator: (v: any) => /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(v),
-      message: 'Weak Password'
-    }
+    type: String, required: [true,'Password is required'], trim: true
   },
   tokens: [{
     token: {

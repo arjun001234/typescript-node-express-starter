@@ -3,7 +3,7 @@ import { UserProperties } from "../interfaces/user.interface";
 import UserModel from "../models/user.model";
 import MiddleWare from "../middleware/middleware";
 
-interface CreateUserRequest extends Request {
+export interface CreateUserRequest extends Request {
   body: UserProperties;
 }
 interface LoginUserRequest extends Request {
@@ -130,6 +130,7 @@ export default class UserRouter {
   private setUser(): void {
     this.router.post(
       "/users",
+      MiddleWare.validateUserCredentials(),
       async (req: CreateUserRequest, res: Response) => {
         try {
           const user = new UserModel(req.body);
